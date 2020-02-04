@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>whatcolorIwear</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-title" content="ใส่สีอะไรดี | whatcolorIwear">">
+    <meta name="theme-color" content="#FFC107">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="icon.jpg">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon.jpg">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon.jpg">
+    <link rel="apple-touch-icon" href="icon.jpg">
+    <link rel="stylesheet" type="text/css" href="https://jabont.com/jayss/jayss.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            font-family: 'Kanit', sans-serif;
+        }
+        
+        .mobile {
+            width: 100%;
+            min-width: 320px;
+            max-width: 450px;
+            margin: auto;
+            position: relative;
+        }
+    </style>
+
+</head>
+
+<body class="bg-black">
+    <div class="mobile bg-amber">
+        <div id="header" class="bg-amber padding pst -fx -top -left wide t-center cl-vblack">
+            <h2 style="color:black;">What Color I Wear?</h2>
+        </div>
+        <div class="bg-black">
+            <sp class="xl"></sp>
+            <sp class="xl"></sp>
+            <sp class="xl"></sp>
+            <sp class="xl"></sp>
+            <sp class="xl"></sp>
+            <sp class="xl"></sp>
+            <sp class="xl"></sp>
+        </div>
+        <div class="padding" id="content">
+            <div>
+                <a>สีเสื้อ : </a>
+                <a id="c1" class="white">คุณยังไม่ได้สุ่มสี</a>
+            </div>
+            <div>
+                <a>สีกางเกง : </a>
+                <a id="c2">คุณยังไม่ได้สุ่มสี</a>
+            </div>
+            <div>
+                <a>สีถุงเท้า : </a>
+                <a id="c3">คุณยังไม่ได้สุ่มสี</a>
+            </div>
+            <div>
+                <a>สีรองเท้า : </a>
+                <a id="c4">คุณยังไม่ได้สุ่มสี</a>
+            </div>
+            <sp class=""></sp>
+        </div>
+        <div class="bg-amber pst -fx -bottom -left wide" id="panel" onclick="displayStudent()">
+            <h1 class="t-center cl-black padding ">สุ่มสีกันเลย!</h1>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var color = ["แดง", "ส้ม", "เหลือง", "เขียว", "ดำ", "ขาว", "ฟ้า", "น้ำเงิน", "เทา"]
+            // if (localStorage.getItem("allStudents") === null) {
+            //     localStorage.setItem("allStudents", "[]");
+            // }
+            // allStudents = JSON.parse(localStorage.allStudents);
+            // displayStudent();
+
+        // function addMore() {
+        //     let thisStudent = prompt("กรอกสี")
+        //     if (thisStudent != null) {
+        //         allStudents.push(thisStudent)
+        //         console.log(allStudents);
+        //         displayStudent();
+        //     }
+        // }
+
+        function displayStudent() {
+            document.getElementById("c1").innerHTML = "";
+            document.getElementById("c2").innerHTML = "";
+            document.getElementById("c3").innerHTML = "";
+            document.getElementById("c4").innerHTML = "";
+            let rand1 = Math.floor(Math.random() * color.length);
+            let rand2 = Math.floor(Math.random() * color.length);
+            let rand3 = Math.floor(Math.random() * color.length);
+            let rand4 = Math.floor(Math.random() * color.length);
+            let colorand1 = color[rand1];
+            let colorand2 = color[rand2];
+            let colorand3 = color[rand4];
+            let colorand4 = color[rand3];
+            c1.innerText = colorand1;
+            c2.innerText = colorand2;
+            c3.innerText = colorand3;
+            c4.innerText = colorand4;
+        }
+
+        // function randomStudent() {
+        //     let rand = Math.floor(Math.random() * allStudents.length);
+        //     let thisStudent = allStudents[rand];
+        //     alert(`ใส่สี ${thisStudent} ไพเรย`);
+        // }
+
+        // function removeStudent(index) {
+        //     remove = allStudents.splice(index, 1);
+        //     displayStudent();
+        // }
+    </script>
+</body>
+
+</html>
